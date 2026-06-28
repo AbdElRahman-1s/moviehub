@@ -15,8 +15,8 @@ function Homepage() {
       <Navbar />
       <main>
         <Herosection />
-        <Typessection />
         <Mostviewed />
+        <Typessection />
         <Moviecards />
       </main>
       <Footer />
