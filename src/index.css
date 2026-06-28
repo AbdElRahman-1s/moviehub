@@ -5,20 +5,19 @@
 html {
   scroll-behavior: smooth;
 }
-/* 
-@layer base {
-  body {m
-    @apply bg-gray-50 text-dark font-sans antialiased;
-  }
-
-  .app-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-} */
 
 
 /*components*/
 
-/* @layer components{
 
-} */
+  .app-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-text{
+    @apply bg-linear-to-br from-blue-500 to-pink-500 bg-clip-text text-transparent text-4xl font-bold
+  }
+
+  .mspan{
+    @apply text-xs text-gray-400 hover:text-gray-700 cursor-pointer
+  }
