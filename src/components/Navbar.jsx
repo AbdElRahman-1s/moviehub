@@ -18,7 +18,7 @@ function Navbar() {
       </div>
       {/*right nav*/}
       <div className='flex items-center'>
-        <button className='border border-gray-300 px-6 py-1 rounded-2xl active:bg-gray-500 active:text-white'>Sign In</button>
+        <button className='border border-gray-300 px-6 py-1 rounded-2xl active:bg-gray-500 active:text-white hover:border-gray-700'>Sign In</button>
       </div>
     </div>
    </nav>

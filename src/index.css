@@ -15,9 +15,13 @@ html {
   }
 
   .gradient-text{
-    @apply bg-linear-to-br from-blue-500 to-pink-500 bg-clip-text text-transparent text-4xl font-bold
+    @apply bg-linear-to-br from-yellow-500 to-pink-500 bg-clip-text text-transparent text-4xl font-bold
   }
 
   .mspan{
     @apply text-xs text-gray-400 hover:text-gray-700 cursor-pointer
+  }
+
+  .btn-watch{
+    @apply flex items-center gap-1 border border-gray-200 py-2 px-6 text-lg font-semibold cursor-pointer hover:bg-gray-600 hover:text-white active:text-yellow-300
   }
