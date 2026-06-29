@@ -62,7 +62,7 @@ const movieCards = [{
 
 function Moviecards() {
   return (
-    <section>
+    <section id="movies">
       <div className="app-container mt-6">
         <div className="relative max-w-52 mb-8">
           <input

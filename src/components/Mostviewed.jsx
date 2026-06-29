@@ -23,7 +23,7 @@ const Mostsee = [{
 
 function Mostviewed() {
   return (
-    <section>
+    <section id="most">
       <div className="app-container pb-10 border-b border-gray-300">
         {/*top cards*/}
         <div className="flex items-center justify-between mt-5">

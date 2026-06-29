@@ -2,7 +2,7 @@
 
 function Herosection() {
   return (
-    <section>
+    <section id="hero">
       <div className="app-container flex flex-col sm:flex-row gap-16 mt-20 items-center border-b border-gray-300 pb-16">
         {/*left hero*/}
         <div className="flex flex-col space-y-8">
