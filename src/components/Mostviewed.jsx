@@ -36,7 +36,6 @@ function Mostviewed() {
             return (
               <div key={i} className="border border-gray-400 hover:-translate-y-1 transition">
                 <img
-                  className="h-"
                   src={mv.image}
                   alt={mv.title}
                 />
