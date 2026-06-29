@@ -20,7 +20,7 @@ function Typessection() {
 
   return (
     <section>
-      <div className="app-container">
+      <div className="app-container border-b border-gray-300 pb-10">
         <div className="flex justify-between items-center mt-6">
         {categories.map((category) => {
           return(
