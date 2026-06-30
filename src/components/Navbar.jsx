@@ -2,10 +2,10 @@ import '../index.css'
 
 
 
-function Navbar() {
+function Navbar({darkMode,setDarkMode}) {
   return (
    <nav>
-    <div className="app-container flex justify-between mt-2 border-b border-gray-200 pb-5">
+    <div className={`app-container flex justify-between pt-3 mt-2 ${!darkMode && `border-b border-gray-200`} pb-5`}>
       {/*left nav*/}
       <div className='gradient-text flex items-center'>
         Filimo
@@ -17,8 +17,12 @@ function Navbar() {
         <span className='mspan'>My list</span>
       </div>
       {/*right nav*/}
-      <div className='flex items-center'>
-        <button className='border border-gray-300 px-6 py-1 rounded-2xl active:bg-gray-500 active:text-white hover:border-gray-700'>Sign In</button>
+      <div className='flex items-center gap-4'>
+        <button 
+          className='change-mode-btn'
+          onClick={() => {setDarkMode(!darkMode)}}
+        >{darkMode ? '🌙' : '☀️'}</button>
+        <button className='px-6 py-1 rounded-2xl bg-gray-500  hover:border-gray-700 cursor-pointer mt-1 active:scale-98 transition-all'>Sign In</button>
       </div>
     </div>
    </nav>

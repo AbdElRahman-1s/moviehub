@@ -62,7 +62,7 @@ const movieCards = [{
 }
 ];
 
-function Moviecards() {
+function Moviecards({darkMode}) {
   
 const [search,setSearch] = useState("");
 
@@ -95,7 +95,7 @@ const [search,setSearch] = useState("");
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 mt-5 gap-4">
           {filteredMovies.map((mc,i) => {
             return(
-              <div key={i} className="border border-gray-400 hover:-translate-y-1 transition">
+              <div key={i} className={`border ${darkMode ? 'border-gray-700' : 'border-gray-400'} hover:-translate-y-1 transition`}>
                 <img
                   src={mc.image}
                   alt={mc.title}

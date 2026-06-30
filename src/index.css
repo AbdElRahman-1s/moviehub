@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /*components*/
 
 
@@ -24,4 +23,8 @@ html {
 
   .btn-watch{
     @apply flex items-center gap-1 border border-gray-200 py-2 px-6 text-lg font-semibold cursor-pointer hover:bg-gray-600 hover:text-white active:text-yellow-300
+  }
+
+  .change-mode-btn{
+    @apply text-xl rounded-full cursor-pointer hover:text-black text-white active:scale-95
   }

@@ -13,14 +13,14 @@ const categories = [
   "Crime"
 ]
 
-function Typessection() {
+function Typessection({darkMode}) {
 
   const [type,setType] = useState('All');
 
 
   return (
     <section>
-      <div className="app-container border-b border-gray-300 pb-10">
+      <div className={`app-container ${!darkMode && `border-b border-gray-200`} ${darkMode && 'mb-30'}`}>
         <div className="flex justify-between items-center mt-6">
         {categories.map((category) => {
           return(

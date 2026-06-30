@@ -21,20 +21,20 @@ const Mostsee = [{
 ];
 
 
-function Mostviewed() {
+function Mostviewed({darkMode}) {
   return (
     <section id="most">
-      <div className="app-container pb-10 border-b border-gray-300">
+      <div className={`app-container pb-10 ${!darkMode && `border-b border-gray-200`} ${darkMode && 'mb-20'}`}>
         {/*top cards*/}
         <div className="flex items-center justify-between mt-5">
-          <span className="text-sm font-medium text-black">Most Watched</span>
+          <span className={`text-sm font-medium ${!darkMode && 'text-black'}`}>Most Watched</span>
           <span className="text-sm text-gray-400 cursor-pointer hover:underline hover:text-gray-900">View All ›</span>
         </div>
         {/*cards*/}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-5 gap-4">
           {Mostsee.map((mv, i) => {
             return (
-              <div key={i} className="border border-gray-400 hover:-translate-y-1 transition">
+              <div key={i} className={`border ${darkMode ? 'border-gray-700' : 'border-gray-400'} hover:-translate-y-1 transition`}>
                 <img
                   src={mv.image}
                   alt={mv.title}
