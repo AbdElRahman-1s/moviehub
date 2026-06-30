@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 const movieCards = [{
   title: 'The Dark Night',
   image: 'https://a.ltrbxd.com/resized/sm/upload/78/y5/zg/ej/oefdD26aey8GPdx7Rm45PNncJdU-0-2000-0-3000-crop.jpg?v=2d0ce4be25',
@@ -61,31 +63,44 @@ const movieCards = [{
 ];
 
 function Moviecards() {
+  
+const [search,setSearch] = useState("");
+
+  const filteredMovies = movieCards.filter((movie) => {
+    return(
+    movie.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+  )
+  })
+
   return (
     <section id="movies">
       <div className="app-container mt-6">
         <div className="relative max-w-52 mb-8">
-          <input
+          <input 
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search"
             className="ring-2 focus:outline-none p-1 ring-gray-300 rounded-2xl px-3 bg-gray-300 hover:shadow-lg focus:shadow-lg"
             type="text"
           />
-          <span className="absolute right-3 top-1.5 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
+          <span 
+          className="absolute right-3 top-1.5 cursor-pointer">
+            <svg 
+             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
               <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
             </svg>
           </span>
         </div>
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-5 gap-4">
-          {movieCards.map((mc,i) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 mt-5 gap-4">
+          {filteredMovies.map((mc,i) => {
             return(
               <div key={i} className="border border-gray-400 hover:-translate-y-1 transition">
                 <img
                   src={mc.image}
                   alt={mc.title}
                 />
-                <div className="flex gap-4 p-4 justify-around items-center">
+                <div className="flex gap-1 p-2 justify-around items-center">
                 <h3 className="text-2xl font-semibold">{mc.title}</h3>
                 <span className="text-yellow-300">{mc.rating}</span>
                 </div>
